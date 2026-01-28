@@ -6,15 +6,15 @@
 
 @layer base {
   :root {
-    /* Dark BBQ Theme - Charcoal & Flame */
-    --background: 0 0% 8%;
-    --foreground: 40 20% 95%;
+    /* Light BBQ Theme - Cream & Warmth */
+    --background: 40 30% 96%;
+    --foreground: 0 0% 12%;
 
-    --card: 0 0% 12%;
-    --card-foreground: 40 20% 95%;
+    --card: 40 30% 98%;
+    --card-foreground: 0 0% 12%;
 
-    --popover: 0 0% 10%;
-    --popover-foreground: 40 20% 95%;
+    --popover: 40 30% 98%;
+    --popover-foreground: 0 0% 12%;
 
     --primary: 25 95% 53%;
     --primary-foreground: 0 0% 100%;
@@ -22,8 +22,8 @@
     --secondary: 0 70% 45%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 0 0% 18%;
-    --muted-foreground: 40 10% 65%;
+    --muted: 40 20% 90%;
+    --muted-foreground: 0 0% 40%;
 
     --accent: 43 90% 55%;
     --accent-foreground: 0 0% 10%;
@@ -31,8 +31,8 @@
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
+    --border: 40 20% 85%;
+    --input: 40 20% 85%;
     --ring: 25 95% 53%;
 
     --radius: 0.5rem;
@@ -43,12 +43,12 @@
     --gold: 43 90% 55%;
     --charcoal: 0 0% 12%;
     --smoke: 0 0% 25%;
-    --cream: 40 30% 90%;
+    --cream: 0 0% 15%;
 
     /* Gradients */
     --gradient-fire: linear-gradient(135deg, hsl(0 70% 45%) 0%, hsl(25 95% 53%) 50%, hsl(43 90% 55%) 100%);
-    --gradient-dark: linear-gradient(180deg, hsl(0 0% 8%) 0%, hsl(0 0% 5%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 14%) 0%, hsl(0 0% 10%) 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(40 30% 96%) 0%, hsl(40 30% 92%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(40 30% 98%) 0%, hsl(40 30% 95%) 100%);
 
     /* Shadows */
     --shadow-fire: 0 4px 30px -5px hsl(25 95% 53% / 0.4);
@@ -56,8 +56,30 @@
   }
 
   .dark {
+    /* Dark BBQ Theme - Charcoal & Flame */
     --background: 0 0% 8%;
     --foreground: 40 20% 95%;
+
+    --card: 0 0% 12%;
+    --card-foreground: 40 20% 95%;
+
+    --popover: 0 0% 10%;
+    --popover-foreground: 40 20% 95%;
+
+    --muted: 0 0% 18%;
+    --muted-foreground: 40 10% 65%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+
+    /* Custom BBQ Colors - Dark mode overrides */
+    --charcoal: 0 0% 12%;
+    --smoke: 0 0% 25%;
+    --cream: 40 30% 90%;
+
+    /* Gradients - Dark mode */
+    --gradient-dark: linear-gradient(180deg, hsl(0 0% 8%) 0%, hsl(0 0% 5%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 14%) 0%, hsl(0 0% 10%) 100%);
   }
 }
 
@@ -129,5 +151,11 @@
     background: hsl(0 0% 10% / 0.8);
     backdrop-filter: blur(12px);
     border: 1px solid hsl(0 0% 20% / 0.5);
+  }
+
+  .glass-light {
+    background: hsl(40 30% 98% / 0.9);
+    backdrop-filter: blur(12px);
+    border: 1px solid hsl(40 20% 85% / 0.5);
   }
 }

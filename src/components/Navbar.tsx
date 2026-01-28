@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/logo.jpg";
+import ThemeToggle from "@/components/ThemeToggle";
+import logo from "@/assets/logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,12 +24,12 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 glass-dark">
+    <nav className="fixed top-0 left-0 right-0 z-50 glass-dark dark:glass-dark glass-light">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#home" className="flex items-center">
-            <img src={logo} alt="King's BBQ Chicken" className="h-14 w-auto rounded" />
+            <img src={logo} alt="King's BBQ Chicken" className="h-16 w-auto" />
           </a>
 
           {/* Desktop Navigation */}
@@ -37,30 +38,30 @@ const Navbar = () => {
               <button
                 key={link.name}
                 onClick={() => scrollToSection(link.href)}
-                className="text-cream/80 hover:text-gold transition-colors duration-300 font-body text-sm uppercase tracking-widest"
+                className="text-foreground/80 hover:text-primary transition-colors duration-300 font-body text-sm uppercase tracking-widest"
               >
                 {link.name}
               </button>
             ))}
           </div>
 
-          {/* Call Button */}
-          <div className="hidden md:flex items-center gap-4">
-            <a href="tel:+94778664726">
+          {/* Theme Toggle & Call Button - Always visible */}
+          <div className="flex items-center gap-3">
+            <ThemeToggle />
+            <a href="tel:+94778664726" className="hidden md:block">
               <Button variant="fire" size="sm" className="gap-2">
                 <Phone className="w-4 h-4" />
                 Call Now
               </Button>
             </a>
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden text-foreground p-2"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
           </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-cream p-2"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
         </div>
 
         {/* Mobile Navigation */}
@@ -71,7 +72,7 @@ const Navbar = () => {
                 <button
                   key={link.name}
                   onClick={() => scrollToSection(link.href)}
-                  className="text-cream/80 hover:text-gold transition-colors duration-300 font-body text-sm uppercase tracking-widest text-left"
+                  className="text-foreground/80 hover:text-primary transition-colors duration-300 font-body text-sm uppercase tracking-widest text-left"
                 >
                   {link.name}
                 </button>
@@ -91,3 +92,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
