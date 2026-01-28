@@ -1,7 +1,7 @@
 import { Phone, Utensils, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroBg from "@/assets/hero-bg.jpg";
-import logo from "@/assets/logo.jpg";
+import logo from "@/assets/logo.png";
 
 const HeroSection = () => {
   return (
