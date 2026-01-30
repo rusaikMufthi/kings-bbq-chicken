@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Phone, MapPin, Clock } from "lucide-react";
+import { Facebook, Music, Phone, MapPin, Clock } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const Footer = () => {
@@ -18,16 +18,20 @@ const Footer = () => {
             {/* Social Icons */}
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://www.facebook.com/share/14VYaiDrECJ/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-muted flex items-center justify-center text-cream/60 hover:bg-primary hover:text-white transition-colors"
               >
                 <Facebook className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="https://www.tiktok.com/@kings.bbq.chicken?_r=1&_t=ZS-93TA8NGdYls"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-muted flex items-center justify-center text-cream/60 hover:bg-primary hover:text-white transition-colors"
               >
-                <Instagram className="w-5 h-5" />
+                <Music className="w-5 h-5" />
               </a>
               <a
                 href="https://wa.me/94778664726"
