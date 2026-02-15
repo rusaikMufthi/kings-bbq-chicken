@@ -6,7 +6,7 @@ import quarterChicken from "@/assets/quarter-chicken.jpg";
 const packages = [
   {
     name: "Full Package",
-    price: "Rs. 2,000",
+    price: "Rs. 2,200",
     image: fullChicken,
     items: ["Full Chicken", "5 Paratta", "Sauce", "Mayonnaise", "Salad"],
     bonus: "Free 400ml Pepsi",
