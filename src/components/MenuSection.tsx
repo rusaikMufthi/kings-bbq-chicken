@@ -9,12 +9,12 @@ const packages = [
     price: "Rs. 2,200",
     image: fullChicken,
     items: ["Full Chicken", "5 Paratta", "Sauce", "Mayonnaise", "Salad"],
-    bonus: "Free 400ml Pepsi",
+    bonus: null,
     popular: true,
   },
   {
     name: "Half Chicken Package",
-    price: "Rs. 1,100",
+    price: "Rs. 1,200",
     image: halfChicken,
     items: ["Half Chicken", "3 Paratta", "Sauce", "Mayonnaise", "Salad"],
     bonus: null,
@@ -31,9 +31,9 @@ const packages = [
 ];
 
 const chickenOnly = [
-  { name: "Full Chicken", price: "Rs. 1,800" },
-  { name: "Half Chicken", price: "Rs. 1,000" },
-  { name: "Quarter Chicken", price: "Rs. 600" },
+  { name: "Full Chicken", price: "Rs. 1,899" },
+  { name: "Half Chicken", price: "Rs. 1,099" },
+  { name: "Quarter Chicken", price: "Rs. 650" },
 ];
 
 const MenuSection = () => {
